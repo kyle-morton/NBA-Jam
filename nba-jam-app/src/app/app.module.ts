@@ -11,8 +11,11 @@ import { TeamsComponent } from './components/teams/teams.component';
 import { StandingsComponent } from './components/standings/standings.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
+
 //material module
 import { MaterialModule } from './modules/material/material.module';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,13 @@ import { MaterialModule } from './modules/material/material.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

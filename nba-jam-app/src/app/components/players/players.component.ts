@@ -16,7 +16,7 @@ export class PlayersComponent implements OnInit {
   public search() {
     this.playerService.GetPlayersByYear('2017-2018', '?player=james')
     .subscribe((players) => {
-      console.log('players: ' + JSON.stringify(players));
+      // console.log('players: ' + JSON.stringify(players));
     });
   }
 

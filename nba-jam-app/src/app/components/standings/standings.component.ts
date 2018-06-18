@@ -13,7 +13,7 @@ export class StandingsComponent implements OnInit {
   ngOnInit() {
     this.standingsService.GetStandingsByYear('2017-2018')
     .subscribe((standings) => {
-      console.log('standings: ' + JSON.stringify(standings));
+      // console.log('standings: ' + JSON.stringify(standings));
     });
   }
 
