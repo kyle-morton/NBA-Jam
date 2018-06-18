@@ -8,14 +8,13 @@ import { PlayersService } from 'src/app/modules/nba/services/players.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private playerService : PlayersService) { }
+  constructor() { }
 
   ngOnInit() {
+  }
 
-    this.playerService.GetPlayersByYear('2017-2018', '?player=james')
-    .subscribe((players) => {
-      console.log('players: ' + JSON.stringify(players));
-    });
+  public click() {
+    console.log('clicked...');
   }
 
 }

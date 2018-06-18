@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StandingsService } from '../../modules/nba/services/standings.service';
 
 @Component({
   selector: 'app-standings',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StandingsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private standingsService : StandingsService) { }
 
   ngOnInit() {
+    this.standingsService.GetStandingsByYear('2017-2018')
+    .subscribe((standings) => {
+      console.log('standings: ' + JSON.stringify(standings));
+    });
   }
 
 }

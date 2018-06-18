@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PlayersService } from 'src/app/modules/nba/services/players.service';
 
 @Component({
   selector: 'app-players',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayersComponent implements OnInit {
 
-  constructor() { }
+  constructor(private playerService : PlayersService) { }
 
   ngOnInit() {
   }
+
+  public search() {
+    this.playerService.GetPlayersByYear('2017-2018', '?player=james')
+    .subscribe((players) => {
+      console.log('players: ' + JSON.stringify(players));
+    });
+  }
+
 
 }

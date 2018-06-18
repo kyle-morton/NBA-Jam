@@ -11,6 +11,9 @@ import { TeamsComponent } from './components/teams/teams.component';
 import { StandingsComponent } from './components/standings/standings.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
+//material module
+import { MaterialModule } from './modules/material/material.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +27,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    // NbaModule
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

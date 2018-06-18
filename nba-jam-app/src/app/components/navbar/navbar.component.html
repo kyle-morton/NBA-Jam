@@ -1,4 +1,17 @@
-<a routerLink="home">Home</a> <br >
-<a routerLink="players">Players</a> <br >
-<a routerLink="teams">Teams</a> <br >
-<a routerLink="standings">Standings</a> <br >
+<mat-toolbar color="primary">
+
+    <span>NBA Jam</span>
+
+    <!-- This fills the remaining space of the current row -->
+    <span style="flex: 1 1 auto"></span>
+  
+    <button mat-button [matMenuTriggerFor]="navMenu"><mat-icon>menu</mat-icon></button>
+
+    <mat-menu #navMenu="matMenu">
+        <button mat-menu-item routerLink="home">Home</button>
+        <button mat-menu-item routerLink="players">Players</button>
+        <button mat-menu-item routerLink="teams">Teams</button>
+        <button mat-menu-item routerLink="standings">Standings</button>
+    </mat-menu>
+</mat-toolbar>
+
